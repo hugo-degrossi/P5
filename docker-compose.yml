@@ -1,18 +1,20 @@
-version: '3.2'
+version: '3.9'
+
 services:
-  api-socks:
-    build:
-      dockerfile: './api/Dockerfile'
-    image: api-socks:latest
-    container_name: shop-api
-    restart: always
+  back:
+    build: ./api
+    container_name: backend
+    hostname: backend
     ports:
-      - '3000:3000'
-  ws-5-frontend:
-    build:
-      dockerfile: './ws-5/Dockerfile'
-    image: node:lts
-    container_name: shop-front
-    restart: always
+      - "3000:3000"
+    networks:
+      default:
+        aliases:
+          - backend
+
+  front:
+    build: ./ws-5
+    container_name: frontend
+    hostname: frontend
     ports:
-      - '8080:8080'
+      - "8080:8080"

@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title": "Shrocks",
+      "description": "The most shreked socks of the swamp !",
+      "image_tag": "shrocks.jpg",
+      "price": 719.9
+    },
+    {
+      "id": 2,
+      "title": "Shroap",
+      "description": "Soap made with tears of Rumpelstiltskin !",
+      "image_tag": "shroap.jpg",
+      "price": 650.9
+    },
+    {
+      "id": 3,
+      "title": "Shrofa",
+      "description": "Sofa to Nextflix and chill with Fiona !",
+      "image_tag": "shrofa.jpg",
+      "price": 619.9
+    },
+    {
+      "id": 4,
+      "title": "Shremistry",
+      "description": "I have chemistry skills and you not, so get out my swamp !!",
+      "image_tag": "shremistry.jpg",
+      "price": 319.9
+    }
+  ]

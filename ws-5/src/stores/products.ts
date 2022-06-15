@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import axios from 'axios';
 
 export interface Product {
   id: number
@@ -41,5 +42,12 @@ export const useProductsStore = defineStore({
         console.log(product.isLiked)
       }
     },
+    setProduct() {
+      axios.get('http://backend:3000/api/products')
+          .then((response) => {
+            this.products = response.data
+            console.log(response.data)
+          });
+    }
   },
 });

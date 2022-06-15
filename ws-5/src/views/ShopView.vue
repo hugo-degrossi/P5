@@ -6,9 +6,11 @@
   import { storeToRefs } from 'pinia'
   import {useCartStore} from "@/stores/cart";
 
-  const { updateLikes } = useProductsStore()
+  const { updateLikes, setProduct } = useProductsStore()
   const { getProducts } = storeToRefs(useProductsStore())
   const { addItemToCard } = useCartStore()
+
+  setProduct()
 
 </script>
 
